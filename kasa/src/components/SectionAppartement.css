@@ -1,0 +1,7 @@
+.appartement__grid__container{
+  border-radius: 25px;
+  margin-top: 3rem;
+  background-color: #F6F6F6;
+  width: 100%;
+  min-height: 100vh;
+}

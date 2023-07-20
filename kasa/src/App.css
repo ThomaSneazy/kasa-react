@@ -1,0 +1,9 @@
+body{
+  margin: 0 auto;
+  padding: 0rem 6rem 0rem 6rem;
+  max-width: 1280px;
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+}
