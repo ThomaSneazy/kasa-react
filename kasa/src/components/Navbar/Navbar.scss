@@ -1,0 +1,46 @@
+.navbar__component{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+  & a{
+    color: var(--red);
+    font-weight: 500;
+    font-size: 1.5rem;
+    &.active{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.navbar__right__container{
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar__img__logo{
+  width: 13rem;
+  cursor: pointer;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px) {
+  .navbar__img__logo{
+    width: 6rem;
+  }
+  .navbar__component a{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0rem;
+  }
+
+  .navbar__component{
+    gap: 1.5rem;
+  }
+
+  .navbar__right__container{
+    gap: 1rem;
+  }
+
+}

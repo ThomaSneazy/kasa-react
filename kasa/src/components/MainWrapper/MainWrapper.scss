@@ -1,0 +1,10 @@
+.main__wrapper{
+  padding: 0rem 6rem 0rem 6rem;
+  max-width: 1280px;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 768px) {
+  .main__wrapper{
+    padding: 1.2rem;
+  }
+}
