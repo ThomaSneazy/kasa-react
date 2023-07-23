@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App/App.jsx';
+import App from '/src/pages/App/App.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import MainWrapper from './components/MainWrapper/MainWrapper.jsx';

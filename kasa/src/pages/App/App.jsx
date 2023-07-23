@@ -1,7 +1,7 @@
 import React from 'react'
 // import Navbar from "../Navbar/Navbar.jsx";
-import Banner from "../Banner/Banner.jsx";
-import SectionAppartement from "../SectionAppartement/SectionAppartement.jsx";
+import Banner from "../../components/Banner/Banner.jsx";
+import SectionAppartement from "../../components/SectionAppartement/SectionAppartement.jsx";
 // import Footer from "../Footer/Footer.jsx";
 
 import "./App.scss";
