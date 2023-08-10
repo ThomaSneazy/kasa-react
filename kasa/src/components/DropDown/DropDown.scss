@@ -1,3 +1,7 @@
+.dropdown {
+  overflow: hidden;
+}
+
 .about__dropdown__container {
   margin: 0 auto;
   margin-top: 1.5rem;
@@ -5,10 +9,10 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-  @media screen and (width <= 768px){
+  @media screen and (width <= 768px) {
     flex-direction: column;
     width: 100%;
-  };
+  }
   & h3 {
     display: flex;
     justify-content: space-between;
@@ -23,7 +27,7 @@
   }
   & p {
     position: relative;
-    margin-top: -0.5rem;
+    // margin-top: -0.5rem;
     z-index: 1;
     padding: 1.25rem;
     border-radius: 0rem 0rem 0.3125rem 0.3125rem;
@@ -31,9 +35,42 @@
   }
 }
 
-.title__dropdown__container{
-    padding: 0.625rem 1.25rem 0.625rem 0.625rem;
-    background-color: var(--red);
-  border-radius: 0.625rem;
+.content__dropdown__container {
+  background-color: var(--grey);
+  padding: 0.5rem 1.25rem;
+  position: relative;
+  border-radius: 0rem 0.625rem;
+  margin-top: -10px;
+  z-index: 8;
+  animation: open-dropdown 0.4s ease-in;
+}
+@keyframes open-dropdown {
+  from {
+    transform: translateY(-100%);
+  }
+}
 
+@keyframes close-dropdown {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.title__dropdown__container {
+  padding: 0.625rem 1.25rem 0.625rem 0.625rem;
+  background-color: var(--red);
+  border-radius: 0.625rem;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.title__dropdown__container img {
+  margin-left: auto; /* Pour placer l'icône à droite */
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
 }

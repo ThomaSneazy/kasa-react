@@ -1,7 +1,7 @@
 import React from 'react'
 import './DropDown.scss'
 
-export function DropDown() {
+export default function DropDown() {
   return (
     <div className="about__dropdown__container">
           <div className="about__description">

@@ -2,7 +2,7 @@ import React from "react";
 import "./CurrentAppartement.scss";
 import { Banner } from "../../components/Banner/Banner.jsx";
 import { AppartementInfos } from "../../components/AppartementInfos/AppartementInfos.jsx";
-import Data from "../../../public/data.json";
+import Data from "../../../src/data.json";
 import { useParams } from "react-router-dom";
 
 

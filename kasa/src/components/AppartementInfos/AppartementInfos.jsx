@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./AppartementInfos.scss";
 import { useParams } from "react-router-dom";
-import Data from "../../../public/data.json";
+import Data from "../../../src/data.json";
 
 export function AppartementInfos() {
   const { id } = useParams();
 
   const appartement = Data.find((app) => app.id === id);
   const name = appartement.host.name;
+
+  const [contentVisible, setContentVisible] = useState(false);
+  const showContent = () => {
+    setContentVisible(!contentVisible);
+  };
 
   if (!appartement) {
     history.push("/erreur");
@@ -50,34 +55,42 @@ export function AppartementInfos() {
       </div>
       <div className="appartement__dropdown__container">
         <div className="dropdown">
-          <div className="title__dropdown__container">
+          <div className="title__dropdown__container" onClick={showContent}>
             <h3>
-              Description <img src="/src/assets/arrow-dropdown.svg" alt="" />
+              Description{" "}
+              <img
+                src="/src/assets/arrow-dropdown.svg"
+                alt=""
+                className={contentVisible ? "rotated" : ""}
+              />
             </h3>
           </div>
-          <div className="content__dropdown__container">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
-              perferendis nobis, illo enim animi, ratione eligendi, fugit non
-              repellendus perspiciatis veritatis dolor in reprehenderit
-              explicabo!
-            </p>
-          </div>
+          {contentVisible && (
+            <div className="content__dropdown__container">
+              <p>{appartement.description}</p>
+            </div>
+          )}
         </div>
         <div className="dropdown">
-          <div className="title__dropdown__container">
+          <div className="title__dropdown__container" onClick={showContent}>
             <h3>
-              Équipements <img src="/src/assets/arrow-dropdown.svg" alt="" />
+              Équipements
+              <img
+                src="/src/assets/arrow-dropdown.svg"
+                alt=""
+                className={contentVisible ? "rotated" : ""}
+              />
             </h3>
           </div>
-          <div className="content__dropdown__container">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
-              perferendis nobis, illo enim animi, ratione eligendi, fugit non
-              repellendus perspiciatis veritatis dolor in reprehenderit
-              explicabo!
-            </p>
-          </div>
+          {contentVisible && (
+            <div className="content__dropdown__container">
+              <ul>
+                {appartement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -4,6 +4,12 @@
   margin-top: 1.5rem;
 }
 
+.dropdown{
+  width: 100%;
+  // background-color: var(--grey);
+  border-radius: 0.625rem 0rem;
+}
+
 .tags {
   display: flex;
   // justify-content: center;
@@ -104,11 +110,16 @@
   }
   & p {
     position: relative;
-    margin-top: -0.5rem;
+    // margin-top: -0.5rem;
     z-index: 1;
     padding: 1.25rem;
     border-radius: 0rem 0rem 0.3125rem 0.3125rem;
-    background: var(--gray, #f6f6f6);
+  }
+  & ul{
+    padding: 0;
+  }
+  & ul, li{
+    list-style-type: none;
   }
 }
 
@@ -116,5 +127,6 @@
     padding: 0.625rem 1.25rem 0.625rem 0.625rem;
     background-color: var(--red);
   border-radius: 0.625rem;
+
 
 }

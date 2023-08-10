@@ -10,7 +10,7 @@ function SectionAppartement() {
   }, []);
 
   function fetchAppartements() {
-    fetch("data.json")
+    fetch("../../src/data.json")
       .then((res) => res.json())
       .then((res) => setAppartements(res))
       .catch(console.error);

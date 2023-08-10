@@ -1,6 +1,6 @@
 import React from "react";
 import { Banner } from "../../components/Banner/Banner.jsx";
-import { DropDown } from "../../components/DropDown/DropDown.jsx";
+import DropDown from "../../components/DropDown/DropDown.jsx";
 import "./About.scss";
 
 function About() {
