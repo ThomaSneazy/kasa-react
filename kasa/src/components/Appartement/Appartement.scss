@@ -5,20 +5,45 @@
   gap: 3rem;
   flex-wrap: wrap;
 }
+
 .appartement__card{
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: end;
-  /* flex-basis: 30%; */
+  flex-basis: 30%;
   /* margin: 1.5rem; */
-  min-width: 18rem;
-  min-height: 18rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 0.625rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
-  background-color: var(--red);
-  padding: 0.5rem;
+  // padding: 0.5rem;
   color: var(--white);
+  img{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+
+  }
 }
+
+.overlay__img{
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.625) 100%);
+  // background-color: var(--red);
+  border-radius: 0.625rem;
+
+}
+
+.title__appartement{
+  z-index: 1;
+  padding: 0.5rem;
+}
+
 
 @media screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .appartement__card{

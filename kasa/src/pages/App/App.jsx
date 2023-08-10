@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 // import Navbar from "../Navbar/Navbar.jsx";
 import Banner from "../../components/Banner/Banner.jsx";
 import SectionAppartement from "../../components/SectionAppartement/SectionAppartement.jsx";
@@ -9,11 +9,10 @@ import "./App.scss";
 function App() {
   return (
     <div>
-        <Banner />
-        <SectionAppartement />
+      <Banner />
+      <SectionAppartement />
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
