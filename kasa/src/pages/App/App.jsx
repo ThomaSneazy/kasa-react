@@ -9,7 +9,7 @@ import "./App.scss";
 function App() {
   return (
     <div>
-      <Banner />
+      <Banner image="../../src/assets/banner.png"/>
       <SectionAppartement />
     </div>
   );
