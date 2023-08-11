@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import './SectionAppartement.scss';
+import React, { useEffect, useState } from "react";
+import "./SectionAppartement.scss";
 import Appartement from "../Appartement/Appartement";
 
 function SectionAppartement() {
@@ -17,8 +17,8 @@ function SectionAppartement() {
   }
 
   return (
-    <section className='appartement__container'>
-      <div className='appartement__flex'>
+    <section className="appartement__container">
+      <div className="appartement__flex">
         {appartements.map((appartement) => (
           <Appartement
             key={appartement.id}

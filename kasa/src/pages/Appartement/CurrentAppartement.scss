@@ -7,7 +7,7 @@
     max-height: 25rem;
     border-radius: 1.5625rem;
     overflow: hidden;
-    & h1{
+    & h1 {
       display: none;
     }
     @media screen and (width <= 768px) {
@@ -49,28 +49,4 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-}
-
-.skeleton {
-  width: 100%;
-  background-color: #f2f2f2; /* Couleur de fond du squelette */
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.skeleton:last-child {
-  margin-bottom: 0; /* Supprimer la marge inférieure pour le dernier squelette */
-}
-
-/* Styles pour les squelettes de différentes hauteurs */
-.skeleton-small {
-  height: 10px;
-}
-
-.skeleton-medium {
-  height: 20px;
-}
-
-.skeleton-large {
-  height: 30px;
 }

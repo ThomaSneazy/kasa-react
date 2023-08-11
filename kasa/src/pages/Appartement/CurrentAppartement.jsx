@@ -5,15 +5,14 @@ import { AppartementInfos } from "../../components/AppartementInfos/AppartementI
 import Data from "../../../src/data.json";
 import { useParams } from "react-router-dom";
 
-
 function CurrentAppartement() {
   const { id } = useParams();
 
-  const appartement = Data.find(app => app.id === id);
+  const appartement = Data.find((app) => app.id === id);
 
   if (!appartement) {
     // Redirigez vers la page d'erreur lorsque l'appartement est introuvable
-    history.push('/erreur'); // Assurez-vous d'avoir une route pour '/erreur'
+    history.push("/erreur"); // Assurez-vous d'avoir une route pour '/erreur'
     return null; // Retournez null ici car vous redirigez
   }
 

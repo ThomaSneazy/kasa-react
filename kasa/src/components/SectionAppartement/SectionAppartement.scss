@@ -1,4 +1,4 @@
-.appartement__container{
+.appartement__container {
   border-radius: 25px;
   margin-top: 3rem;
   background-color: var(--grey);
@@ -6,8 +6,8 @@
   min-height: 100vh;
 }
 
-@media screen and (min-device-width : 320px) and (max-device-width : 767px) {
-  .appartement__container{
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .appartement__container {
     background-color: transparent;
   }
 }

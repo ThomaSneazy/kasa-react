@@ -1,18 +1,24 @@
-:root{
-  --red: #FF6060;
+:root {
+  --red: #ff6060;
   --white: #fff;
   --black: #000;
-  --grey: #F6F6F6;
+  --grey: #f6f6f6;
 }
 
-body{
+body {
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--black);
 }
-a{
+a {
   text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }

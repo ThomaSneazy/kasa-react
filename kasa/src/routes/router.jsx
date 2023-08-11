@@ -1,25 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from '/src/pages/App/App.jsx';
-import Navbar from '../components/Navbar/Navbar.jsx';
-import Footer from '../components/Footer/Footer.jsx';
-import MainWrapper from '../components/MainWrapper/MainWrapper.jsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "/src/pages/App/App.jsx";
+import Navbar from "../components/Navbar/Navbar.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import MainWrapper from "../components/MainWrapper/MainWrapper.jsx";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import CurrentAppartement from '../pages/Appartement/CurrentAppartement.jsx';
-import About from '../pages/About/About.jsx';
-import ErrorPage from '../pages/404/ErrorPage.jsx';
+import CurrentAppartement from "../pages/Appartement/CurrentAppartement.jsx";
+import About from "../pages/About/About.jsx";
+import ErrorPage from "../pages/404/ErrorPage.jsx";
 
 // eslint-disable-next-line react-refresh/only-export-components
 const HeaderFooterLayout = () => {
-  return <>
-  <MainWrapper>
-    <Navbar />
-    <Outlet />
-  </MainWrapper>
-    <Footer />
-  </>
+  return (
+    <>
+      <MainWrapper>
+        <Navbar />
+        <Outlet />
+      </MainWrapper>
+      <Footer />
+    </>
+  );
 };
-
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <App />
+        element: <App />,
       },
       {
         path: "/appartement/:id",
@@ -38,13 +39,13 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
-      }
-    ]
+      },
+    ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

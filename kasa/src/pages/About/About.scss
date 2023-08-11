@@ -1,13 +1,12 @@
-.banner__about{
-  .banner__container{
-    & h1{
+.banner__about {
+  .banner__container {
+    & h1 {
       display: none;
     }
   }
 }
 
-
 .about__dropdown__container {
-max-width: 70rem;
-margin: auto;
+  max-width: 70rem;
+  margin: auto;
 }

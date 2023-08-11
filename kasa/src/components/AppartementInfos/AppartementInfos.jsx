@@ -20,7 +20,7 @@ export function AppartementInfos() {
     <div className="appartement__infos__container">
       <div className="appartement__title_user__container">
         <div className="appartement__infos__left">
-          <h1>{appartement.title}</h1>
+          <h1>{appartement.title} </h1>
           <h2 className="localisation">{appartement.location}</h2>
           <div className="tags">
             {appartement.tags.map((tag) => (
