@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <div className="banner__about">
-        <Banner image="../../src/assets/banner-about.png" />
+        <Banner />
       </div>
 
       <div className="about__dropdown__container">
