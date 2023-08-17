@@ -23,8 +23,12 @@
     max-width: 8rem;
     @media screen and (width <= 768px) {
       font-size: 0.625rem;
-      flex-direction: column;
+      padding: 0.19rem 0.5rem;
     }
+  }
+  @media screen and (width <= 768px) {
+    width: 100%;
+    // flex-direction: column;
   }
 }
 

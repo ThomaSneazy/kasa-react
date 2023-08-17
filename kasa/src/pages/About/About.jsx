@@ -3,11 +3,13 @@ import { Banner } from "../../components/Banner/Banner.jsx";
 import DropDown from "../../components/DropDown/DropDown.jsx";
 import "./About.scss";
 
+const bannerAbout = ["../../src/assets/banner-about.png"];
+
 function About() {
   return (
     <>
       <div className="banner__about">
-        <Banner />
+        <Banner images={bannerAbout} />
       </div>
 
       <div className="about__dropdown__container">

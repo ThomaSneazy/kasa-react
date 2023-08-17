@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./SectionAppartement.scss";
 import Appartement from "../Appartement/Appartement";
+import { fetchAppartements } from "../../services/api";
 
 function SectionAppartement() {
   const [appartements, setAppartements] = useState([]);
 
   useEffect(() => {
-    fetchAppartements();
-  }, []);
+    async function fetchData() {
+      try {
+        const data = await fetchAppartements();
+        setAppartements(data);
+      } catch (error) {
+        // Gérer les erreurs ici
+      }
+    }
 
-  function fetchAppartements() {
-    fetch("../../src/data.json")
-      .then((res) => res.json())
-      .then((res) => setAppartements(res))
-      .catch(console.error);
-  }
+    fetchData();
+  }, []);
 
   return (
     <section className="appartement__container">
@@ -22,7 +25,7 @@ function SectionAppartement() {
         {appartements.map((appartement) => (
           <Appartement
             key={appartement.id}
-            id={appartement.id} // Ajoutez la prop "key" avec une valeur unique
+            id={appartement.id}
             title={appartement.title}
             cover={appartement.cover}
           />

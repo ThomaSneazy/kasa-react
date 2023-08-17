@@ -3,13 +3,18 @@ import React from "react";
 import Banner from "../../components/Banner/Banner.jsx";
 import SectionAppartement from "../../components/SectionAppartement/SectionAppartement.jsx";
 // import Footer from "../Footer/Footer.jsx";
-
 import "./App.scss";
+
+const bannerHomepage = ["../../src/assets/banner.png"];
+
 
 function App() {
   return (
     <div>
-      <Banner />
+      <div className="banner__container">
+        <h1>Chez vous, partout et ailleurs</h1>
+      <Banner images={bannerHomepage}/>
+      </div>
       <SectionAppartement />
     </div>
   );
