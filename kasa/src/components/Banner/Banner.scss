@@ -1,5 +1,5 @@
 .banner__container {
-  margin-top: 2rem;
+  // margin-top: 2rem;
   width: 100%;
   height: 220px;
   position: relative;
@@ -22,6 +22,9 @@
     }
     .banner__container {
       height: 7rem;
+    }
+    .banner__position{
+      display: none;
     }
   }
 
@@ -63,6 +66,9 @@
 
 
 .banner__overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 100%;
   height: 100%;

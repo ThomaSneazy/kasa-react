@@ -12,8 +12,8 @@ function CurrentAppartement() {
 
   if (!appartement) {
     // Redirection vers la page d'erreur lorsque l'appartement est introuvable
-    history.push("/erreur"); // Assurez-vous d'avoir une route pour '/erreur'
-    return null; // Retournez null ici car vous redirigez
+    history.push("/erreur");
+    return null;
   }
 
   return (

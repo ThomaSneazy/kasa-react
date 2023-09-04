@@ -31,7 +31,17 @@ export function AppartementInfos() {
 
         <div className="appartement__infos__right">
           <div className="appartement__user">
-            <h3>{name}</h3>
+            <h3>
+              {name.includes(" ")
+                ? name.split(" ").map((part, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && <br />}{" "}
+                      {/* Ajoute un <br> après le premier mot */}
+                      {part}
+                    </React.Fragment>
+                  ))
+                : name}
+            </h3>
             <div className="appartement__avatar">
               <img src={appartement.host.picture} alt="" />
             </div>
